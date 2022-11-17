@@ -1,0 +1,17 @@
+Package: prismjs
+Type: Package
+Title: Server-Side Syntax Highlighting
+Version: 0.1.0
+Authors@R: person("Jeroen", "Ooms", role = c("aut", "cre"), email = "jeroen@berkeley.edu",
+    comment = c(ORCID = "0000-0002-4035-0289"))
+Description: Prism is a lightweight, extensible syntax highlighter, built with 
+    modern web standards in mind. This package provides server-side rendering in
+    'R' using 'V8' such that no JavaScript is required in the resulting HTML 
+    documents.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Imports: 
+    V8,
+    xml2
+RoxygenNote: 7.2.1
+Roxygen: list(markdown = TRUE)
