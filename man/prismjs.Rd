@@ -38,6 +38,9 @@ prism_languages()
 \item{doc}{an \link[xml2:read_xml]{xml2 document} that will be modified in place
 such that all \verb{<code class="language-xyz">} elements are replaced with highlighted html.}
 }
+\value{
+html with classes that can be colorized using a prims stylesheet
+}
 \description{
 The \code{prism_highlight_text} function takes a string with a single code snippet
 and returns an html fragment with syntax classes. This html gets colorized by

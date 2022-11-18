@@ -17,6 +17,7 @@
 #' @export
 #' @param txt string with code that you want to highlight
 #' @param language the language that `txt` is in, one of `prism_languages()`.
+#' @return html with classes that can be colorized using a prims stylesheet
 #' @examples html <- prism_highlight_text('p { color: red }', language = 'css')
 #' cat(html)
 prism_highlight_text <- function(txt, language = 'r'){
