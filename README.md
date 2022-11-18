@@ -2,6 +2,8 @@
 
 Server-side syntax highlighting in R using [prism.js](https://prismjs.com)
 
+## Install
+
 ```r
 # Download and install prismjs in R
 install.packages('prismjs', 
@@ -24,3 +26,4 @@ Or process an entire document:
 
 ```r
 prism_highlight_document("input.html", output = "output.html")
+```
