@@ -66,7 +66,7 @@ prism_process_xmldoc <- function(doc){
     }
     input <- trimws(xml2::xml_text(x))
     output <- prism_highlight_text(input, language = lang)
-    newnode <- xml2::read_html(sprintf('<code class="%s">%s</code>', langclass, output))
+    newnode <- xml2::read_xml(sprintf('<code class="%s">%s</code>', langclass, output), options = c("RECOVER", "NOERROR", "NOBLANKS"))
     parent <- xml2::xml_parent(x)
     if(xml2::xml_name(parent) == 'pre'){
       if(xml2::xml_has_attr(parent, 'class')){
