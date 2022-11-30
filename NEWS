@@ -1,0 +1,5 @@
+1.1.0
+  - Internally use xml2::read_html instead of read_xml to parse prismjs output.
+
+1.0.0
+  - Initial release

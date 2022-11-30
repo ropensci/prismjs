@@ -66,7 +66,7 @@ prism_process_xmldoc <- function(doc){
     }
     input <- trimws(xml2::xml_text(x))
     output <- prism_highlight_text(input, language = lang)
-    newnode <- xml2::read_xml(sprintf('<code class="%s">%s</code>', langclass, output), options = c("RECOVER", "NOERROR", "NOBLANKS"))
+    newnode <- parse_html_node(sprintf('<code class="%s">%s</code>', langclass, output))
     parent <- xml2::xml_parent(x)
     if(xml2::xml_name(parent) == 'pre'){
       if(xml2::xml_has_attr(parent, 'class')){
@@ -75,7 +75,7 @@ prism_process_xmldoc <- function(doc){
         xml2::xml_set_attr(parent, 'class', langclass)
       }
     }
-    xml2::xml_replace(x, xml2::xml_root(newnode))
+    xml2::xml_replace(x, newnode)
   })
   return(doc)
 }
@@ -92,4 +92,8 @@ prism_languages <- function(){
   assign("ctx", V8::v8("window"), environment(.onLoad))
   ctx$source(system.file("js/prism.js", package = pkg))
   ctx$source(system.file("js/bindings.js", package = pkg))
+}
+
+parse_html_node <- function(html){
+  xml2::xml_child(xml2::xml_child(xml2::read_html(html)))
 }
