@@ -75,7 +75,9 @@ prism_process_xmldoc <- function(doc){
         xml2::xml_set_attr(parent, 'class', langclass)
       }
     }
-    xml2::xml_replace(x, newnode)
+    xml2::xml_set_attr(x, 'hidden', 'hidden')
+    xml2::xml_set_attr(x, 'class', paste0(langclass, '-input'))
+    xml2::xml_add_sibling(x, newnode)
   })
   return(doc)
 }
