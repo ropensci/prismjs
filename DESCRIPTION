@@ -2,7 +2,7 @@ Package: prismjs
 Type: Package
 Title: Server-Side Syntax Highlighting
 Version: 2.0.0
-Authors@R: c(person("Jeroen", "Ooms", role = c("aut", "cre"), email = "jeroen@berkeley.edu",
+Authors@R: c(person("Jeroen", "Ooms", role = c("aut", "cre"), email = "jeroenooms@gmail.com",
     comment = c(ORCID = "0000-0002-4035-0289")),
     person("Lea Verou", role = "cph", comment="Prism JavaScript library"))
 Description: Prism <https://prismjs.com/> is a lightweight, extensible syntax 
