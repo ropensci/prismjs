@@ -10,7 +10,8 @@ Description: Prism <https://prismjs.com/> is a lightweight, extensible syntax
     server-side rendering in R using 'V8' such that no JavaScript library is
     required in the resulting HTML documents. Over 400 languages are supported.
 License: MIT + file LICENSE
-URL: https://ropensci.r-universe.dev/prismjs https://docs.ropensci.org/prismjs/
+URL: https://ropensci.r-universe.dev/prismjs
+    https://docs.ropensci.org/prismjs/
 BugReports: https://github.com/ropensci/prismjs/issues
 Encoding: UTF-8
 Imports: 
