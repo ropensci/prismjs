@@ -57,9 +57,9 @@ prism_highlight_document <- function(input, output = NULL, include_css = FALSE, 
 #' such that all `<code class="language-xyz">` elements are replaced with highlighted html.
 prism_process_xmldoc <- function(doc){
   supported <- prism_languages()
-  lapply(xml2::xml_find_all(doc, "//code[starts-with(@class,'language-')]"), function(x){
+  lapply(xml2::xml_find_all(doc, "//code[contains(@class,'language-')]"), function(x){
     langclass <- tolower(xml2::xml_attr(x, 'class'))
-    lang <- sub("^language-", "", langclass)
+    lang <- sub("^.*language-(\\S+).*$", "\\1", langclass)
     if(!lang %in% supported){
       warning("Skipping unsupported language by PrismJS: ", langclass, call. = FALSE)
       return()
