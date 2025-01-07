@@ -1,3 +1,6 @@
+2.1.0
+  - Fix prism_process_xmldoc to recognize code chunks with multiple classes
+
 2.0.0
   - prism_process_xmldoc() now keeps original input code as hidden field in html
     pre blocks to facilitate copy-to-clipboard buttons.
